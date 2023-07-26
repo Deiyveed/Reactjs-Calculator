@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 // Function to evaluate the expression
 function evaluateExpression(expression) {
   try {
+    // eslint-disable-next-line no-new-func
     return new Function('return ' + expression)();
   } catch (error) {
     Swal.fire({

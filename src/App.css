@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #dfc3ef;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  background-color: #001e34;
+  display: grid;
+  grid-template-rows: 17rem 1fr;
+  border-radius: 15px;
+}
+
+/* result-container with inputs div and outputs div design */
+
+.result-container {
+  background-color: #001e34;
+  border-radius: 15px 15px 0 0;
+  color: #ffffff;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+}
+
+.inputs {
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
+.outputs {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+}
+
+/* buttons design */
+
+.buttons-container {
+  background-color: #002b4a;
+  border-radius:0 0 15px 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 2fr;
+}
+
+.buttons-container button {
+  cursor: pointer;
+  padding: 2rem 2.5rem;
+  font-size: 20px;
+}
+
+.buttons-container-1 {
+  background-color: #002b4a;
+  border-radius:0 0 15px 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.buttons-container-2 {
+  background-color: #002b4a;
+  border-radius:0 0 15px 15px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.buttons-container-2a {
+  background-color: #002b4a;
+  border-radius:0 0 15px 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.buttons-container-2ab {
+  background-color: #002b4a;
+  border-radius:0 0 15px 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.buttons-container-2abc {
+  background-color: #002b4a;
+  border-radius:0 0 15px 15px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.buttons-container-2b {
+  background-color: #002b4a;
+  border-radius:0 0 15px 15px;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.num-button {
+  background-color: #002b4a;
+  border: 1px solid #001e34;
   color: white;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+.num-button-zero {
+  border-radius: 0 0 0 15px;
+  background-color: #002b4a;
+  border: 1px solid #001e34;
+  color: white;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* function buttons design */
+
+.function-button {
+  background-color: #002b4a;
+  border: 1px solid #001e34;
+  color: #8e82d8;
+  font-weight: 700;
+}
+
+.function-button-1 {
+  background-color: #002b4a;
+  border: 1px solid #001e34;
+  color: #2baa3b;
+  font-weight: 700;
+}
+
+.function-button-equals {
+  background-color: #002b4a;
+  border: 1px solid #001e34;
+  color: #2baa3b;
+  font-weight: 700;
+  border-radius: 0 0 15px 0;
+}
+
+/* resposinve design for mobile */
+@media only screen and (max-width: 480px) {
+  .buttons-container button {
+      cursor: pointer;
+      padding: 2rem 2rem;
+      font-size: 13px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .buttons-container-2 {
+      background-color: #002b4a;
+      border-radius:0 0 15px 15px;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+  }
+  
+  
+  .buttons-container-2abc {
+      background-color: #002b4a;
+      border-radius:0 0 15px 15px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
   }
 }
